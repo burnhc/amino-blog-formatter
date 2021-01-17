@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<title>Help | Amino Blogging Assistant</title>
+		<link rel = "stylesheet" type = "text/css" href = "styles.css">
+		<link rel = "icon" href = "https://lh3.googleusercontent.com/AD39LuJZmS5ZFHMJ4kdd53_xl1P2EVVXvZBmSQwWR75qVzEa6r-88pyHfhsznE1L-g=s180">
+		<link href="https://fonts.googleapis.com/css?family=Advent+Pro:700|Open+Sans|Roboto" rel="stylesheet"> 
+		<script src = "script.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	</head>
+	
+	<body>
+		<div id = "wrapper">
+			<div id = "header">
+				<h1>AMINO BLOGGING ASSISTANT</h1>
+				<h4 style = "text-align: center;">an automatic blog paragraph divider and styliser utility for bloggers on amino apps.</h4>
+				<h5>Built by <a href = "http://aminoapps.com/p/n8yr8n">s &#x0438; A &#x1D18; &#x1D07; &#x2122;</a> from <a href = "http://aminoapps.com/c/harry-potter">9 &#x00BE; Amino</a>.</h5>
+                
+                <div align = center>
+                    <!-- Start of CuterCounter Code -->
+                    <a href="http://www.cutercounter.com/" target="_blank"><img src="http://www.cutercounter.com/hit.php?id=gmvacxkc&nd=6&style=9" border="0" alt="blog counter"></a>
+                    <!-- End of CuterCounter Code -->
+                </div>
+                <p></p>
+				<button id = "navButton" onclick = "location.href = 'index.html'" type = "button">Home</button>
+			</div>
+			<div id = "websiteBackground">
+				<h1>Help Center</h1>
+				<h4>navigation</h4>
+				<p>Press on one of the links below to jump to that section.</p>
+				<ul>
+					<li><a href = "#sectionAbout">About</a></li>
+					<li style = "border-top: solid #ededed; border-bottom: solid #ededed;"><a href = "#sectionTutorial">Step-by-step tutorial</a></li>
+					<li><a href = "#sectionTips">Tips and tricks</a></li>
+				</ul>
+				<h3 id = "sectionAbout" >SECTION 1 | about</h3>
+				<p>The Amino Blogging Assistant is designed for bloggers on
+				the <a href "https://play.google.com/store/apps/details?id=com.narvii.amino.master">Amino Apps</a> mobile app
+				to stylise their blogs with unprecedented ease.</p>
+				
+				<p>In every community, you will find stunning blogs with eye-catching, evenly-divided paragraphs and
+				beautiful aesthetics.</p>
+				<img src = "sampleGIF.gif" id = "sampleGIF" alt = "Sample blogs">
+				
+				<p>But realise that users that do spend the time to make their blogs look so polished also end up
+				spending hours, if not days, adjusting the margins, formatting, and spacing of their paragraphs.
+				
+				<p><i>Why does it take so much effort?</i></p>
+				
+				<p>The Amino blog editor is a plain-text (as opposed to a rich-text) editor. All the
+				formatting is done character-by-character, line-by-line, with no shortcuts in-between. This means that those
+				fancy indentations and spaces and lines that we see had been inputted manually (and painstakingly) by the user,
+				with each style replicated on every single new line of text (rather than the formatting being on one paragraph).</p>
+				
+				<p>With the Amino Blogging Assistant, you can now format your entire blog paragraph with the push of a button.
+				No longer will you need to spend hours breaking the 'Space' button to indent your text or squint your eyes
+				to see if the text is lined-up. Simply select the formatting that you want for each line, and the Amino Blogging
+				Assistant utility will automatically generate all the text formatting for you in seconds.</p>
+				
+				<h3 id = "sectionTutorial">SECTION 2 | step-by-step tutorial</h3>
+				<h4>step 1: text alignment</h4>
+				<p>The first step is to select your text alignment: either left or center alignment. 'Left-alignment' is set 
+				by default. If you select 'Center-alignment', your text style will automatically generate the [C] tag attached to it.</p>
+				<img src = "step1.PNG" id = "step" alt = "Tutorial">
+				
+				<h4>step 2: text styles</h4>
+				<p>The second step is to select from the four available text styles: <i>italic</i>, <b>bold</b>, <u>underline</u>,
+				and <del>strikethrough</del>. In the Amino blog editor, these four styles correspond to the following tags: [I], [B], [U], and [S] respectively.
+				You can check multiple boxes for multiple styles. If you do not want any text styles, leave all the checkboxes empty.</p>
+				<img src = "step2.PNG" id = "step" alt = "Tutorial">
+				
+				<h4>step 3: indentation</h4>
+				<p>Here, you can specify the number of spaces that you want before your text as indentation. The spaces will appear
+				after the text style tag but before the custom starter (see Step 4) and the actual line of text. If you do not want
+				any space indentation, leave the value at 0. <strong>Non-integer values are invalid.</strong></p>
+				<img src = "step3.PNG" id = "step" alt = "Tutorial">
+				
+				<h4>step 4: custom starting characters</h4>
+				<p>In this step, you can specify any characters or symbols (including spaces) that you want to appear after the space
+				indentation but before the actual line of text.</p>
+				
+				<p>For example, you can enter '| ' (including the ending space) to generate this aesthetic effect with your paragraph:</p>
+				
+				<pre style = "font-size: 1em; text-align: left;">
+| Lorem ipsum dolor sit amet,
+| meis sadipscing at mea. Cu eum
+| falli saperet, cu vel suas
+| magna solum, vix hinc posse
+| omnesque te.</pre>
+
+				<p>This feature supports special, non-keyboard symbols as well. If you do not want starting characters, leave this field blank.</p>
+				<img src = "step4.PNG" id = "step" alt = "Tutorial">
+				
+				<h4>line style preview</h4>
+				<p>This line preview shows you what your line style will look like with your current settings. This updates
+				immediately as you change the settings so you can see how your text will be formatted beforehand. If something looks
+				amiss, you can return to the settings above and make any revisions accordingly until you are satisfied. <strong>Please note that
+				you cannot type directly into that box; it is only a preview.</strong></p>
+				<img src = "step5.PNG" id = "step" alt = "Tutorial">
+				
+				<h4>step 5: maximum line characters</h4>
+				<p>Here, you can specify the maximum number of characters that you want per line. The Amino Blog Assistant will
+				divide up your paragraph for you based on that maximum character count. The minimum value is 15 characters per line.
+				30 - 50 characters per line is recommended. <strong>Non-integer values are invalid.</strong></p>
+				<img src = "step6.PNG" id = "step" alt = "Tutorial">
+				
+				<h4>step 6: your paragraph</h4>
+				<p>Enter your paragraph text into the box on one line. Then, press the 'Format text' button. Only one paragraph can be formatted at a time.
+				<strong>Multiple paragraphs are currently not supported;</strong> the program may not run properly if you attempt to format more than one
+				paragraph.</p>
+				<img src = "step7.PNG" id = "step" alt = "Tutorial">
+				
+				<h4>step 7: your formatted text</h4>
+				<p>After pressing the 'Format text' button, the Amino Blogging Assistant will generate your formatted text according to your
+				style settings. If you wish to revise your settings, just make the changes above and then press the 'Format text'
+				button again to update your text formatting.</p>
+				<img src = "step8.PNG" id = "step" alt = "Tutorial">
+				
+				<h4>step 8: copy and paste into amino</h4>
+				<p>Once you are satisfied, you can copy your formatted text and paste it directly into the Amino App blog editor.</p>
+				<img src = "step9.png" id = "step" alt = "Tutorial">
+				
+				<h3 id = "sectionTips">SECTION 3 | tips and tricks</h3>
+				<h4>1 | fancy fonts</h4>
+				<p>Like to use fancy fonts? Those work here, too. You can copy and paste your paragraph text into font generators such as
+                <a href = "http://www.coolletters.net/cool-fancy-text/">Cool Fancy Text Generator</a> or <a href = "https://lingojam.com/FancyLetters">Fancy Letters</a>.
+                However, using the <a href = "https://play.google.com/store/apps/details?id=com.theruralguys.stylishtext&hl=en_US">Stylish Text</a> app may cause the program to crash.</p>
+				<img src = "tip1.PNG" id = "step" alt = "Tip">
+				<img src = "tip2.PNG" id = "step" alt = "Tip">
+				
+				<h4>2 | custom start as fancy indentation</h4>
+				<p>If you don't want to settle for the plain indentation, leave 'Indentation' at 0 and customise your entire line style
+				in the 'Custom Starting Characters' field (including spaces), and you can create some very unique text designs. You can
+    			copy and paste special, non-keyboard symbols from websites such as <a href = "https://coolsymbol.com/">Cool Symbol</a>.
+				</p>
+				<img src = "tip3.PNG" id = "step" alt = "Tip">
+				<img src = "tip4.PNG" id = "step" alt = "Tip">
+			</div>
+		</div>
+	</body>
+</html>

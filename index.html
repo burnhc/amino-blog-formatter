@@ -2,17 +2,100 @@
 
 <html>
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129063891-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-129063891-1');
+        </script>
+        
 		<title>Amino Blogging Assistant</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Blogging Assistant">
+		<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no"/>
+        
 		<link rel = "stylesheet" type = "text/css" href = "styles.css">
-		<link rel = "icon" href = "https://lh3.googleusercontent.com/AD39LuJZmS5ZFHMJ4kdd53_xl1P2EVVXvZBmSQwWR75qVzEa6r-88pyHfhsznE1L-g=s180">
+		<link rel = "icon" href = "https://i.ibb.co/42NkJGs/amino.png">
 		<link href="https://fonts.googleapis.com/css?family=Advent+Pro:700|Open+Sans|Roboto" rel="stylesheet"> 
 		<script src = "script.js"></script>
 	</head>
-	<body>
+	
+	<body onload = "textStyle()">
 		<div id = "wrapper">
 			<div id = "header">
 				<h1>AMINO BLOGGING ASSISTANT</h1>
-				<p>Amino Blogging Assistant has moved to: <a href="http://www.aminobloggingassistant.rf.gd/">http://www.aminobloggingassistant.rf.gd/</a><p>
+                <h4 style = "text-align: center;">for bloggers on amino apps.</h4>
+				</h5>
+                <div align = center>
+                    <!-- Start of CuterCounter Code -->
+                    <a href="http://www.cutercounter.com/" target="_blank"><img src="http://www.cutercounter.com/hit.php?id=gmvacxkc&nd=6&style=9" border="0" alt="blog counter"></a>
+                    <!-- End of CuterCounter Code -->
+                </div>
+				<p></p>
+				<button id = "navButton" onclick = "location.href = 'helppage.html'" type = "button">Help</button>
+
+			</div>
+			<div id = "websiteBackground">
+				<form action="/action_page.php">
+					<h4>1 |  text alignment</h4>
+					<p>Select the alignment of your text.</p>
+					<div id = alignmentBox>
+						<input type = "radio" id = "left" name = "alignment" value = "left" checked = "checked" onClick = "textStyle()"> Left-alignment<br>
+						<input type = "radio" id = "center" name = "alignment" value = "center" onClick = "textStyle()"> Center-alignment<br>
+					</div>
+					
+					<h4>2 |  text styles</h4>
+					<p>Select the style options for your text (leave all unchecked for none).</p>
+					<div id = styleBox>
+						<input type = "checkbox" id = "style1" value = "I" onClick = "textStyle()"> Italic [I]<br>
+						<input type = "checkbox" id = "style2" value = "B" onClick = "textStyle()"> Bold [B]<br>
+						<input type = "checkbox" id = "style3" value = "U" onClick = "textStyle()"> Underline [U]<br>
+						<input type = "checkbox" id = "style4" value = "S" onClick = "textStyle()"> Strikethrough [S]<br>
+					</div>
+					
+					<h4>3 |  indentation</h4>
+					<p>Enter how many spaces you want at the start of each line as indentation (0 for none).</p>
+						<input type = "number" id = "spacesBeforeLine" name = "spacesBeforeLine"
+						min = "0" max = "50" oninput = "textStyle()" value = "0"/>
+					
+					<h4>4 |  custom start</h4>
+					<p>Enter any custom, special characters that you want to appear after the indentation but before the text, including
+					spaces (leave blank for none).</p>
+						<input type = "text" id = "customStart" name = "customStart" oninput = "textStyle()" placeholder = "Type here."/>
+					
+					<h3>your line style preview:</h3>
+					<p>The field below updates as you modify the style settings above so you can preview how each line of text will be formatted.</p>
+						<input type = "text" id = "fullTextStyle" name = "fullTextStyle" readonly = "readonly"/>
+					
+					<h4>5 |  max. line characters</h4>
+					<p>Enter the maximum number of characters that you want per line <strong>(minimum 15)</strong>, or check the box below
+					    if you do not want to divide your text.</p>
+						<input type = "checkbox" id = "checkLineDivision" onClick = "disableLineDivision()"> No line division.<br>
+						<p></p>
+						<input type = "number" id = "charPerLine" name = "charPerLine"
+						min = "15" max = "200" value = "30" placeholder = "Enter a number." required />
+					<div id = "paragraphArea">
+						<h4>6 |  your blog</h4>
+						<p><b>Multiple paragraphs are supported!</b> Enter each paragraph separated by a space. Then, press the 'Format text' button below to format your text with the
+						style settings above.</p>
+							<textarea id = "paragraph" name = "paragraph" 
+							placeholder = "Enter your paragraphs here." required></textarea>
+					</div>
+					<button type = "button" id = formatTextButton onclick = "checkIfFull()">Format text</button>
+					<div id = "textReformattedBox">
+						<h3>your formatted blog:</h3>
+						<p>Once you press 'Format text', your formatted blog will appear below. Press the 'Copy text' button
+						   to copy all of your formatted text onto your clipboard.</p>
+						<p></p>
+						<button type = "button" id = copyTextButton onclick = "copyText()">Copy text</button>
+						<textarea id = "reformattedText" readonly = "readonly" style= "white-space: pre-wrap;"></textarea>
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
